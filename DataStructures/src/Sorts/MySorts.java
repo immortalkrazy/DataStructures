@@ -74,7 +74,7 @@ public class MySorts {
             int minIndex = start;
             int minValue = arr[start];
 
-            // in that arrray start from the strat point and go upto the end
+            // in that array start from the start point and go up to the end
             for (int i = start + 1; i < end; i++) {
 
                   if (arr[i] < minValue) {
