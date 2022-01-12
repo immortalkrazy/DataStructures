@@ -3,11 +3,14 @@ package tree;
 //Java Binary Search Tree
 
 public class Tree {
+
       Node root;
 
       // some basic test code
       public static void main(String[] args) {
+
             Tree tree = new Tree();
+
             int[] items = { 5, 8, 7, 1, 9, 3, 0, 4, 6, 2 };
             for (int i : items)
                   tree.insert(i);
@@ -16,6 +19,7 @@ public class Tree {
             System.out.println("Tree Size: " + tree.getSize());
             System.out.println("Find 3: " + tree.find(3));
             tree.inorder();
+
       }
 
       public boolean insert(int val) {
