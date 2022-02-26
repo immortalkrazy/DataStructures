@@ -1,22 +1,22 @@
-/*               Clonable (I)                           Iterable (I) 
+/*               Clonable (I)     Serializable (I)    Iterable (I) 
  *                                                         |
  *                                                         |
  *                                                         |                                                                                                                              
  *                                                      Collection (I) 1.2
- *                                                         |
- *                                                         |
- *                                                         |
- *                 ------------------------------------------------------------------------------------
- *                |                                        |                                          |
- *                |                                        |                                          |
- *              List (I)                                Set (I) 1.2                               Queue (I) 1.5
- *              - Duplicates are Allowed                - Duplicates are NOT Allowed              - Represent objects before processing
- *              - Insertion Order Preserved             - Insertion Order NOT Preserved           - FIFO                                                         
- *                |                                        |                                          |
- *                |                                        |                                          |
- *    -------------------------                 -------------------------                 -------------------------                              
- *    |           |           |                 |                       |                 |                       |                       
- *    |           |           |                 |                       |                 |                       |
+ * RandomAccess (I)                                        |
+ *  |                                                      |
+ *  |                                                      |
+ *  |              ------------------------------------------------------------------------------------
+ *  |              |                                        |                                          |
+ *  |              |                                        |                                          |
+ *  |            List (I)                                Set (I) 1.2                               Queue (I) 1.5
+ *  |           - Duplicates are Allowed                - Duplicates are NOT Allowed              - Represent objects before processing
+ *  |           - Insertion Order Preserved             - Insertion Order NOT Preserved           - FIFO                                                         
+ *  |             |                                        |                                          |
+ *  |             |                                        |                                          |
+ *  | -------------------------                 -------------------------                 -------------------------                              
+ *  | |           |           |                 |                       |                 |                       |                       
+ *  | |           |           |                 |                       |                 |                       |
  * ArrayList LinkedList    Vector 1.0        HashSet 1.2          SortedSet (I) 1.2   PriorityQueue 1.5        BlockingQueue 1.5
  *   1.2        1.2           |                 |                       |                                         |
  *                            |                 |                       |                                         |
@@ -125,9 +125,94 @@
  *                - Object remove(int index); 
  *                - List subList(int fromIndex, int toIndex); 
  *                - Object set (int index, Object o);
- *  
+ *    ArrayList: 
+ *          - Duplicates are allowed 
+ *          - Insertion order is preserved 
+ *          - Heterogeneous elements are allowed
+ *          - Resizable Array /Growable Array as underlying data structure
+ *          - null insertion is possible
+ *          - Implements RandomAccess(I).
+ *          
+ *          - Methods: 
+ *                - boolean add (Object o); 
+ *                - boolean addAll(Collection c); 
+ *                - boolean remove (Object o); 
+ *                - boolean removeAll(Collection c); 
+ *                - boolean retainAll(Collection c); 
+ *                - void clear(); 
+ *                - boolean contains(Object o); 
+ *                - boolean containsAll(Collection c); 
+ *                - boolean isEmpty(); 
+ *                - int size(); 
+ *                - Object[] toArray(); 
+ *                - Iterator iterator(); 
+ *                - T[] toArray(T[] a); 
+ *                - boolean equals(Object o);
  * 
+ *                - void add (int index, Object o); 
+ *                - boolean addAll(int index, Collection c);
+ *                - Object get(int index); 
+ *                - int indexOf(Object o); 
+ *                - int lastIndexOf(Object o); 
+ *                - ListIterator listIterator(); 
+ *                - ListIterator listIterator(int startIndex); 
+ *                - Object remove(int index); 
+ *                - List subList(int fromIndex, int toIndex); 
+ *                - Object set (int index, Object o);
+ *                
+ *                - void trimToSize();
+ *                
+ *          - Constructors:
+ *                - ArrayList l = new ArrayList();
+ *                - ArrayList l = new ArrayList(int initialCapacity);
+ *                - ArrayList l = new ArrayLiat(Collection c);      
+ *                
+ *    LinkedList:
+ *          - Used for Stacks & Queue implementation 
+ *          - Doubly Linked List as underlying data structure
+ *          - Duplicates are allowed 
+ *          - Insertion order is preserved
+ *          - Heterogeneous elements allowed
+ *          - null insertion in allowed 
+ *          
+ *          - Methods:
+ *                
+ *                - boolean add (Object o); 
+ *                - boolean addAll(Collection c); 
+ *                - boolean remove (Object o); 
+ *                - boolean removeAll(Collection c); 
+ *                - boolean retainAll(Collection c); 
+ *                - void clear(); 
+ *                - boolean contains(Object o); 
+ *                - boolean containsAll(Collection c); 
+ *                - boolean isEmpty(); 
+ *                - int size(); 
+ *                - Object[] toArray(); 
+ *                - Iterator iterator(); 
+ *                - T[] toArray(T[] a); 
+ *                - boolean equals(Object o);
  * 
+ *                - void add (int index, Object o); 
+ *                - boolean addAll(int index, Collection c);
+ *                - Object get(int index); 
+ *                - int indexOf(Object o); 
+ *                - int lastIndexOf(Object o); 
+ *                - ListIterator listIterator(); 
+ *                - ListIterator listIterator(int startIndex); 
+ *                - Object remove(int index); 
+ *                - List subList(int fromIndex, int toIndex); 
+ *                - Object set (int index, Object o);
+ *                
+ *                - void addFirst(Object o);
+ *                - void addLast (Object o);
+ *                - Object getFirst()
+ *                - Object getLast();
+ *                - Object removeFirst();
+ *                - Object removeLast();
+ *          
+ *          - Constructors:
+ *                - LinkedList l = new LinkedList();
+ *                - LinkedList l = new LinkedList(Collection c);      
  */
 
 package javaCollections;
