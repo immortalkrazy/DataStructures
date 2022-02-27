@@ -75,7 +75,40 @@
  *                                                                                  
  */
 
-/*
+/*    Java.util.Collections: pg 791
+ *          
+ *          List:
+ *                
+ *                - void sort(List list);
+ *                - void sort(List list, Comparator c);
+ *                
+ *                - int binarySearch(List list, Object key);
+ *                - int binarySearch(List list, Object key, Comparator c);
+ *                - void reverse(List list);
+ *                
+ *                - Comparator reverseOrder();
+ *                
+ *                - void shuffle(List list);
+ *                - void shuffle(List list, Random rdm);
+ *                
+ *                - void copy(List dst, List src);
+ *                - List nCopies(int n, Object o);
+ *                - void fill(List list, Object o);
+ *           
+ *          Collection:
+ *          
+ *                - Object max(Collection c);
+ *                - Object max(Collection c, Comparator c);
+ *                
+ *                - Object min(Collection c);
+ *                - Object min(Collection c, Comparator c);
+ *                
+ *                - boolean disjoint(Collection c1, Collection c2);
+ *                - int frequency(Collection c, Object o);
+ * 
+ * 
+ *  
+ * 
  *    Collection: 
  *          - Represent group of individual objects as a single identity 
  *          - root interface of collection interface 
@@ -212,7 +245,20 @@
  *          
  *          - Constructors:
  *                - LinkedList l = new LinkedList();
- *                - LinkedList l = new LinkedList(Collection c);      
+ *                - LinkedList l = new LinkedList(Collection c);
+ *                
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
+ *                      
  */
 
 package javaCollections;
